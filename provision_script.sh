@@ -5,8 +5,12 @@ wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key
 apt-get update -y
 apt-get upgrade -y
 
+echo 'Setting up logfile'
+LOGFILE=/home/vagrant/provision_script.log
+echo > $LOGFILE
+
 #install firefox
-#apt-get install -y firefox
+apt-get install -y firefox >> $LOGFILE
 
 #install postgrest, postgis, and pgadmin3
 apt-get install -y postgresql-9.5-postgis-2.2 pgadmin3 >> $LOGFILE
@@ -40,6 +44,9 @@ pip install csvkit >> $LOGFILE
 #curl https://raw.githubusercontent.com/hackoregon/hack-university-database-engineering/master/Data/Crime%20Data/crimedata.csv -o /home/vagrant/proj/crimedataraw.csv >> $LOGFILE
 
 su postgres < /home/vagrant/proj/database_creation.sh
+
+# change log file owner to vagrant
+chown vagrant:vagrant $LOGFILE
 
 echo 'run this on host machine: '
 echo 'vagrant plugin install vagrant-vbguest'
