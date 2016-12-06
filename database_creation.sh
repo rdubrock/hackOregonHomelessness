@@ -3,9 +3,9 @@ CREATE USER vagrant with CREATEUSER;
 ALTER USER vagrant PASSWORD 'vagrant';
 CREATE database homelesness;
 CREATE EXTENSION plpython3u
-CREATE SCHEMA homelesness;
+CREATE SCHEMA homelessness;
 
-#COPY education.schools FROM '/home/vagrant/proj/schools_original.csv'
+COPY homelesness.housinginventorycounts FROM '/home/vagrant/proj/HistoryHic.csv'
 #  WITH(FORMAT CSV, HEADER);
 
 #CREATE TABLE education.performance (
