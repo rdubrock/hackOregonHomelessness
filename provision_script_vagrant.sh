@@ -17,9 +17,6 @@ echo 'export PATH=~/miniconda3/bin:${PATH}' >> ~/.profile
 #modify the path for the rest of this scripts
 export PATH=~/miniconda3/bin:${PATH}
 
-echo 'Loading data'
-psql < proj/buildCrimeDataRaw.sql
-
 echo 'setting up Jupyter'
 conda install -y jupyter
 
