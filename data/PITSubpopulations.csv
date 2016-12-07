@@ -1,0 +1,67 @@
+Table,Population Type,Shelter,Date,Value
+PIT Subpopulations,Chronic Substance Abuse,Sheltered,01/29/14,96
+PIT Subpopulations,Chronic Substance Abuse,Unsheltered,01/29/14,*
+PIT Subpopulations,Chronic Substance Abuse,Sheltered,01/28/15,132
+PIT Subpopulations,Chronic Substance Abuse,Unsheltered,01/28/15,837
+PIT Subpopulations,Chronic Substance Abuse,Sheltered,01/27/16,163
+PIT Subpopulations,Chronic Substance Abuse,Unsheltered,01/27/16,*
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of Families)",Sheltered,01/29/2014,6
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of Families)",Unsheltered,01/29/2015,*
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of Families)",Sheltered,01/28/2015,7
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of Families)",Unsheltered,01/28/2016,10
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of Families)",Sheltered,01/27/2016,5
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of Families)",Unsheltered,01/27/2017,*
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of People in Household)",Sheltered,01/29/2014,14
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of People in Household)",Unsheltered,01/29/2015,*
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of People in Household)",Sheltered,01/28/2015,26
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of People in Household)",Unsheltered,01/28/2016,38
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of People in Household)",Sheltered,01/27/2016,15
+PIT Subpopulations,"Chronically Homeless Families
+(Total Number of People in Household)",Unsheltered,01/27/2017,*
+PIT Subpopulations,Veterans,Sheltered,01/29/2014,*
+PIT Subpopulations,Veterans,Unsheltered,01/29/2015,*
+PIT Subpopulations,Veterans,Sheltered,01/28/2015,*
+PIT Subpopulations,Veterans,Unsheltered,01/28/2016,*
+PIT Subpopulations,Veterans,Sheltered,01/27/2016,*
+PIT Subpopulations,Veterans,Unsheltered,01/27/2017,*
+PIT Subpopulations, Female Veterans,Sheltered,01/29/2014,*
+PIT Subpopulations, Female Veterans,Unsheltered,01/29/2015,*
+PIT Subpopulations, Female Veterans,Sheltered,01/28/2015,*
+PIT Subpopulations, Female Veterans,Unsheltered,01/28/2016,*
+PIT Subpopulations, Female Veterans,Sheltered,01/27/2016,*
+PIT Subpopulations, Female Veterans,Unsheltered,01/27/2017,*
+PIT Subpopulations,Severely Mentally Ill †,Sheltered,01/29/2014,638
+PIT Subpopulations,Severely Mentally Ill †,Unsheltered,01/29/2015,*
+PIT Subpopulations,Severely Mentally Ill †,Sheltered,01/28/2015,392
+PIT Subpopulations,Severely Mentally Ill †,Unsheltered,01/28/2016,311
+PIT Subpopulations,Severely Mentally Ill †,Sheltered,01/27/2016,434
+PIT Subpopulations,Severely Mentally Ill †,Unsheltered,01/27/2017,*
+PIT Subpopulations,Chronic Substance Abuse †,Sheltered,01/29/2014,701
+PIT Subpopulations,Chronic Substance Abuse †,Unsheltered,01/29/2015,*
+PIT Subpopulations,Chronic Substance Abuse †,Sheltered,01/28/2015,486
+PIT Subpopulations,Chronic Substance Abuse †,Unsheltered,01/28/2016,233
+PIT Subpopulations,Chronic Substance Abuse †,Sheltered,01/27/2016,461
+PIT Subpopulations,Chronic Substance Abuse †,Unsheltered,01/27/2017,*
+PIT Subpopulations,People with HIV/AIDS †,Sheltered,01/29/2014,16
+PIT Subpopulations,People with HIV/AIDS †,Unsheltered,01/29/2015,*
+PIT Subpopulations,People with HIV/AIDS †,Sheltered,01/28/2015,17
+PIT Subpopulations,People with HIV/AIDS †,Unsheltered,01/28/2016,13
+PIT Subpopulations,People with HIV/AIDS †,Sheltered,01/27/2016,18
+PIT Subpopulations,People with HIV/AIDS †,Unsheltered,01/27/2017,*
+PIT Subpopulations,Victims of Domestic Violence †,Sheltered,01/29/2014,495
+PIT Subpopulations,Victims of Domestic Violence †,Unsheltered,01/29/2015,*
+PIT Subpopulations,Victims of Domestic Violence †,Sheltered,01/28/2015,431
+PIT Subpopulations,Victims of Domestic Violence †,Unsheltered,01/28/2016,520
+PIT Subpopulations,Victims of Domestic Violence †,Sheltered,01/27/2016,448
+PIT Subpopulations,Victims of Domestic Violence †,Unsheltered,01/27/2017,*
