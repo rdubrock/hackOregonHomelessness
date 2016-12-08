@@ -62,7 +62,7 @@ CREATE TABLE HistoryPitSummary (
         "Population" VARCHAR(32) NOT NULL,
         "Sub-Population" VARCHAR(37) NOT NULL,
         "Date" DATE NOT NULL,
-        "Value" VARCHAR(11),
+        "Value" VARCHAR(11)
 );
 COPY homeless.HistoryPitSummary FROM '/home/vagrant/proj/data/HistoryPitSummary.csv'
 	WITH(FORMAT CSV, HEADER);"
