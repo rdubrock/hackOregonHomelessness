@@ -55,6 +55,18 @@ su postgres -c 'psql -c "CREATE DATABASE vagrant;"' >> $LOGFILE
 echo 'Running scripts as user vagrant...'
 su vagrant -c 'bash ~vagrant/proj/provision_script_vagrant.sh' >> $LOGFILE
 
+# Set up Schema
+su vagrant -c 'psql -c "CREATE SCHEMA homeless;
+CREATE TABLE HistoryPitSummary (
+        "Table" VARCHAR(17) NOT NULL,
+        "Population" VARCHAR(32) NOT NULL,
+        "Sub-Population" VARCHAR(37) NOT NULL,
+        "Date" DATE NOT NULL,
+        "Value" VARCHAR(11),
+);
+COPY homeless.HistoryPitSummary FROM '/home/vagrant/proj/data/HistoryPitSummary.csv'
+	WITH(FORMAT CSV, HEADER);"
+
 
 # change log file owner to vagrant
 chown vagrant:vagrant $LOGFILE
