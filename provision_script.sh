@@ -56,16 +56,8 @@ echo 'Running scripts as user vagrant...'
 su vagrant -c 'bash ~vagrant/proj/provision_script_vagrant.sh' >> $LOGFILE
 
 # Set up Schema
-su vagrant -c 'psql -c "CREATE SCHEMA homeless
-CREATE TABLE HistoryPitSummary (
-        '\'table\'' VARCHAR(17) NOT NULL,
-        '\'population\'' VARCHAR(32) NOT NULL,
-        '\'sub-population\'' VARCHAR(37) NOT NULL,
-        '\'date\'' DATE NOT NULL,
-        '\'value\'' VARCHAR(11)
-)
-COPY homeless.HistoryPitSummary FROM '\''/home/vagrant/proj/data/HistoryPitSummary.csv\''
-	WITH(FORMAT CSV, HEADER);"'
+su vagrant -c 'psql < proj/build-tables.sql'
+	
 
 
 # change log file owner to vagrant
