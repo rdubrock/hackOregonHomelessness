@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+#    'rest_framework',
+    'tallyapp.apps.TallyappConfig',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +87,7 @@ WSGI_APPLICATION = 'homelessness.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'vagrant',
+        'NAME': 'portlandhomelesstally',
         'USER': 'troys',
         'PASSWORD': 'troys',
         'HOST': 'localhost',
