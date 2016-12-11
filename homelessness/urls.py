@@ -20,10 +20,16 @@ Including another URLconf
 #    url(r'^admin/', admin.site.urls),
 #]
 
+# troys 10DEC added tallyapp, shelter, and population urls
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from rest_framework.urlpatterns import format_suffix_patterns
+from tallyapp import views
+
+
 urlpatterns = [
-    url(r'^tallyapp/', include('tallyapp.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^hic$', views.hic_list),
+    url(r'^pit$', views.pit_list),
 ]

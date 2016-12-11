@@ -1,6 +1,7 @@
 
 from django.db import models
 
+
 class HistoryHic(models.Model):
     """
     Database schema for HistoryHic - City of Portland homeless shelter tally
