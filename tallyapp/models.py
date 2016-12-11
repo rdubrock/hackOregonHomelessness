@@ -6,15 +6,15 @@ class HistoryHic(models.Model):
     Database schema for HistoryHic - City of Portland homeless shelter tally
     """
 
-    shelter = models.CharField(max_length=60, null=True, default='')
-    bedtype = models.CharField(max_length=60, null=True, default='')
-    tallyyear = models.IntegerField()
+    Shelter = models.CharField(max_length=60, null=True, default='')
+    BedType = models.CharField(max_length=60, null=True, default='')
+    Date = models.DateField(null=True, blank=True)
 
     class Meta:
-         ordering = ('shelter',)
+         ordering = ('Shelter',)
 
     def __str__(self):
-        return '%s %s %d' % (self.shelter, self.bedtype, self.tallyyear)
+        return '%s %s %s' % (self.Shelter, self.BedType, self.Date)
 
 class HistoryPitSummary(models.Model):
     """

@@ -20,7 +20,6 @@ Including another URLconf
 #    url(r'^admin/', admin.site.urls),
 #]
 
-
 from django.conf.urls import include, url
 from django.contrib import admin
 
