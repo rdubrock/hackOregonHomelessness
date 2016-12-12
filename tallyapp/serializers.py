@@ -16,7 +16,7 @@ class PitWriteSerializer(serializers.ModelSerializer):
     Serializer for PUT/DELETE operations on Point-In-Time (PIT) tally.
     """
 
-    populations = serializers.PrimaryKeyRelatedField(queryset=HistoryPitSummaryAPI.objects.all(), allow_null=True)
+    # populations = serializers.PrimaryKeyRelatedField(queryset=HistoryPitSummaryAPI.objects.all(), allow_null=True)
 
     class Meta:
         model = HistoryPitSummaryAPI
@@ -36,7 +36,7 @@ class PitSubWriteSerializer(serializers.ModelSerializer):
     Serializer for PUT/DELETE operations on PIT sub-populations.
     """
 
-    populations = serializers.PrimaryKeyRelatedField(queryset=HistoryPitSubpopulationsAPI.objects.all(), allow_null=True)
+    # populations = serializers.PrimaryKeyRelatedField(queryset=HistoryPitSubpopulationsAPI.objects.all(), allow_null=True)
 
     class Meta:
         model = HistoryPitSubpopulationsAPI
@@ -56,7 +56,7 @@ class HicWriteSerializer(serializers.ModelSerializer):
     Serializer for PUT/DELETE operations on shelters.
     """
 
-    shelters = serializers.PrimaryKeyRelatedField(queryset=HistoryHicAPI.objects.all(), allow_null=True)
+    # shelters = serializers.PrimaryKeyRelatedField(queryset=HistoryHicAPI.objects.all(), allow_null=True)
 
     class Meta:
         model = HistoryHicAPI

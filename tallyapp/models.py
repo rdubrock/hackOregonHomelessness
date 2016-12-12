@@ -17,7 +17,7 @@ class HistoryPitSummaryAPI(models.Model):
          ordering = ('Date', 'Table', 'Population',  'SubPopulation', )
 
     def __str__(self):
-        return '%s %s %s %s %0.2f' % (self.Table, self.Population, self.SubPopulation, self.Date, self.Value)
+        return '%s %s %s %s' % (self.Table, self.Population, self.SubPopulation, self.Date)
 
 class HistoryPitSubpopulationsAPI(models.Model):
     """
@@ -34,7 +34,7 @@ class HistoryPitSubpopulationsAPI(models.Model):
         ordering = ('Date', 'Table', 'Population', 'Shelter', )
 
     def __str__(self):
-        # troys 12dec removed self.Value due to TypeError Float reported with %0.2f
+        # return '%s %s %s %s %f' % (self.Table, self.Population, self.Shelter, self.Date, self.Value)
         return '%s %s %s %s' % (self.Table, self.Population, self.Shelter, self.Date)
 
 class HistoryHicAPI(models.Model):
@@ -52,4 +52,4 @@ class HistoryHicAPI(models.Model):
          ordering = ('Date', 'Table', 'Shelter', 'UnitBed', )
 
     def __str__(self):
-        return '%s %s %s %0.2f' % (self.Shelter, self.UnitBed, self.Date, self.Value)
+        return '%s %s %s' % (self.Shelter, self.UnitBed, self.Date)
