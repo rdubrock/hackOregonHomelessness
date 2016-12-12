@@ -54,13 +54,15 @@ def pit_detail(request, pk, format=None):
 
     if request.method == 'GET':
         serializedPit = PitSerializer(instance=tally)
-        print('INFO: GET PIT pit_list')
+        print('INFO: GET PIT pit_detail')
         print(serializedPit)
         return Response(serializedPit.data)
 
     elif request.method == 'PUT':
         serializedPit = PitSerializer(tally, data=request.data) # takes data in and serializes to python
         if serializedPit.is_valid():
+            print('INFO: PUT PIT pit_detail')
+            print(serializedPit)
             serializedPit.save() # save the updated pit tally
             return Response(serializedPit.data)
         return Response(serializedPit.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -91,6 +93,35 @@ def pitsub_list(request, format=None):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET', 'PUT', 'DELETE'])
+def pitsub_detail(request, pk, format=None):
+    """
+    Retrieve, update or delete a PIT subpopulation tally instance.
+    """
+    try:
+        tally = HistoryPitSubpopulationsAPI.objects.get(pk=pk)
+    except HistoryPitSubpopulationsAPI.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializedPitSub = PitSubSerializer(instance=tally)
+        print('INFO: GET PIT pitsub_detail')
+        print(serializedPitSub)
+        return Response(serializedPitSub.data)
+
+    elif request.method == 'PUT':
+        serializedPitSub = PitSubSerializer(tally, data=request.data) # takes data in and serializes to python
+        if serializedPitSub.is_valid():
+            print('INFO: PUT PIT pitsub_detail')
+            print(serializedPit)
+            serializedPitSub.save() # save the updated pit tally
+            return Response(serializedPitSub.data)
+        return Response(serializedPitSub.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        tally.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
 @api_view(['GET', 'POST'])
 def hic_list(request, format=None):
     """
@@ -112,3 +143,32 @@ def hic_list(request, format=None):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def hic_detail(request, pk, format=None):
+    """
+    Retrieve, update or delete a HIC tally instance.
+    """
+    try:
+        tally = HistoryHicAPI.objects.get(pk=pk)
+    except HistoryHicAPI.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializedHic = HicSerializer(instance=tally)
+        print('INFO: GET HIC hic_detail')
+        print(serializedHic)
+        return Response(serializedHic.data)
+
+    elif request.method == 'PUT':
+        serializedHic = HicSerializer(tally, data=request.data) # takes data in and serializes to python
+        if serializedHic.is_valid():
+            print('INFO: PUT HIC hic_detail')
+            print(serializedHic)
+            serializedHic.save() # save the updated pit tally
+            return Response(serializedHic.data)
+        return Response(serializedHic.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        tally.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
