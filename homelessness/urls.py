@@ -30,6 +30,7 @@ from tallyapp import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^hic$', views.hic_list),
     url(r'^pit$', views.pit_list),
+    url(r'^pitsub$', views.pitsub_list),
+    url(r'^hic$', views.hic_list),
 ]

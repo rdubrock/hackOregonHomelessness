@@ -21,20 +21,21 @@ from tallyapp.serializers import *
 
 
 @api_view(['GET', 'POST'])
-def hic_list(request, format=None):
+def pit_list(request, format=None):
     """
-    List all snippets or create a new shelter tally.
+    List all snippets or create a new PIT tally.
     """
 
     if request.method == 'GET':
-        shelters = HistoryHicAPI.objects.all()
-        print('INFO: shelter_list')
-        serializer = HicSerializer(shelters, many=True)
+        populations = HistoryPitSummaryAPI.objects.all()
+        serializer = PitSerializer(populations, many=True)
+        print('INFO: GET PIT population_list')
         print(serializer)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = HicWriteSerializer(data=request.data)
+        serializer = PitWriteSerializer(data=request.data)
+        print('INFO: POST PIT population_list')
         print(serializer)
         if serializer.is_valid():
             serializer.save()
@@ -42,20 +43,43 @@ def hic_list(request, format=None):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'POST'])
-def pit_list(request, format=None):
+def pitsub_list(request, format=None):
     """
-    List all snippets or create a new population tally.
+    List all snippets or create a new subpopulation tally.
     """
 
     if request.method == 'GET':
-        populations = HistoryPitSummaryAPI.objects.all()
-        print('INFO: population_list')
-        serializer = PitSerializer(populations, many=True)
+        populations = HistoryPitSubpopulationsAPI.objects.all()
+        serializer = PitSubSerializer(populations, many=True)
+        print('INFO: GET PIT subpopulation_list')
         print(serializer)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = PitWriteSerializer(data=request.data)
+        serializer = PitSubWriteSerializer(data=request.data)
+        print('INFO: POST PIT subpopulation_list')
+        print(serializer)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET', 'POST'])
+def hic_list(request, format=None):
+    """
+    List all snippets or create a new shelter tally.
+    """
+
+    if request.method == 'GET':
+        shelters = HistoryHicAPI.objects.all()
+        serializer = HicSerializer(shelters, many=True)
+        print('INFO: GET HIC shelter_list')
+        print(serializer)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = HicWriteSerializer(data=request.data)
+        print('INFO: POST HIC shelter_list')
         print(serializer)
         if serializer.is_valid():
             serializer.save()
