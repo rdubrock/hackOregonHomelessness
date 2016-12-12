@@ -2,23 +2,34 @@
 \connect portlandhomelesstally
 DROP SCHEMA IF EXISTS homeless CASCADE;
 CREATE SCHEMA homeless
-    CREATE TABLE HistoryHic (
-        "id" serial NOT NULL PRIMARY KEY,
-        "UnitBedType" VARCHAR(17) NOT NULL,
-        "ShelterType" VARCHAR(32) NOT NULL,
-        "Date" DATE NOT NULL,
-        "Value" VARCHAR(11))
     CREATE TABLE HistoryPitSummary (
         "id" serial NOT NULL PRIMARY KEY,
         "Table" VARCHAR(17) NOT NULL,
-        "Population" VARCHAR(32) NOT NULL,
-        "Sub-Population" VARCHAR(37) NOT NULL,
+        "Population" VARCHAR(40) NOT NULL,
+        "SubPopulation" VARCHAR(40) NOT NULL,
         "Date" DATE NOT NULL,
-        "Value" VARCHAR(11));
-COPY homeless.HistoryPitSummary ("Table", "Population", "Sub-Population", "Date", "Value")
-    FROM '/home/vagrant/proj/data/HistoryPitSummary.csv'
-        	WITH(FORMAT CSV, HEADER);
+        "Value" NUMERIC(7,2))
+    CREATE TABLE PitSubpopulations (
+        "id" serial NOT NULL PRIMARY KEY,
+        "Table" VARCHAR(18) NOT NULL,
+        "Population" VARCHAR(67) NOT NULL,
+        "Shelter" VARCHAR(40) NOT NULL,
+        "Date" DATE NOT NULL,
+        "Value" NUMERIC(7,2))
+    CREATE TABLE HistoryHic (
+        "id" serial NOT NULL PRIMARY KEY,
+        "Table" VARCHAR(23) NOT NULL,
+        "Shelter" VARCHAR(40) NOT NULL,
+        "UnitBed" VARCHAR(40) NOT NULL,
+        "Date" DATE NOT NULL,
+        "Value" NUMERIC(7,2));
 
---- troys 11DEC HistoryHic.csv needs to reorient the records
---- COPY homeless.HistoryHic FROM '/home/vagrant/proj/data/HistoryHic.csv'
---- 	WITH(FORMAT CSV, HEADER);
+COPY homeless.HistoryPitSummary ("Table", "Population", "SubPopulation", "Date", "Value")
+    FROM '/home/vagrant/proj/data/HistoryPitSummary.csv'
+        WITH(FORMAT CSV, HEADER);
+COPY homeless.PitSubpopulations ("Table", "Population", "Shelter", "Date", "Value")
+    FROM '/home/vagrant/proj/data/PITSubpopulations.csv'
+        WITH(FORMAT CSV, HEADER);
+COPY homeless.HistoryHic ("Table", "Shelter", "UnitBed", "Date", "Value")
+    FROM '/home/vagrant/proj/data/HistoryHic.csv'
+ 	      WITH(FORMAT CSV, HEADER);

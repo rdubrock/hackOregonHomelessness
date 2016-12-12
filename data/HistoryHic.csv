@@ -1,8 +1,121 @@
-table,unitbedtype,sheltertype,date,value
-
-UnitBedType,"Units, Households with Children","Beds, Households with Children","Beds, Households without Children","Units, Households with Children","Beds, Households with Children","Beds, Households without Children","Beds, Households without Children","Units, Households with Children","Beds, Households with Children","Beds, Households without Children","Units, Households with Children","Beds, Households with Children","Beds, Households without Children","Units, Households with Children","Beds, Households with Children","Beds, Households without Children"
-ShelterType,Emergency Shelter,Emergency Shelter,Emergency Shelter,Transitional Housing,Transitional Housing,Transitional Housing,Safe Haven,Permanent Supportive Housing,Permanent Supportive Housing,Permanent Supportive Housing,HPRP,HPRP,HPRP,RRH,RRH,RRH
-01/30/2013 (2013),113,340,437,347,"1,011",861,,331,989,"2,537",,,,85,205,96
-01/29/2014 (2014),31,87,384,190,584,841,,,,,,,,,,
-01/28/2015 (2015),43,127,382,111,326,821,,,,,,,,,,
-01/27/2016 (2016),104,344,618,78,217,635,,,,,,,,,,
+Table,Population,SubPopulation,Date,Value
+HistoryPitSummary,Sheltered People in Households...,With at Least One Adult and One Child,01/30/2013,1135
+HistoryPitSummary,Sheltered People in Households...,Under Age 18,01/30/2013,653
+HistoryPitSummary,Sheltered People in Households...,Age 18 - 24,01/30/2013,101
+HistoryPitSummary,Sheltered People in Households...,Over Age 24,01/30/2013,381
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/30/2013,3.1440443213
+HistoryPitSummary,Sheltered People in Households...,With Only Children,01/30/2013,23
+HistoryPitSummary,Sheltered People in Households...,In one-child Households,01/30/2013,19
+HistoryPitSummary,Sheltered People in Households...,In multi-child households ,01/30/2013,4
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/30/2013,1.0952380952
+HistoryPitSummary,Sheltered People in Households...,Without Children,01/30/2013,1388
+HistoryPitSummary,Sheltered People in Households...,Age 18 - 24,01/30/2013,183
+HistoryPitSummary,Sheltered People in Households...,Over Age 24,01/30/2013,1205
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/30/2013,1.0138787436
+HistoryPitSummary,Sheltered People in Households...,All Sheltered People,01/30/2013,2546
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/30/2013,1.4540262707
+HistoryPitSummary,Unsheltered People in Households...,With at Least One Adult and One Child,01/30/2013,123
+HistoryPitSummary,Unsheltered People in Households...,Under Age 18,01/30/2013,59
+HistoryPitSummary,Unsheltered People in Households...,Age 18 - 24,01/30/2013,12
+HistoryPitSummary,Unsheltered People in Households...,Over Age 24,01/30/2013,52
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/30/2013,3.3243243243
+HistoryPitSummary,Unsheltered People in Households...,With Only Children,01/30/2013,14
+HistoryPitSummary,Unsheltered People in Households...,In one-child Households,01/30/2013,14
+HistoryPitSummary,Unsheltered People in Households...,In multi-child households ,01/30/2013,0
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/30/2013,1
+HistoryPitSummary,Unsheltered People in Households...,Without Children,01/30/2013,1758
+HistoryPitSummary,Unsheltered People in Households...,Age 18 - 24,01/30/2013,165
+HistoryPitSummary,Unsheltered People in Households...,Over Age 24,01/30/2013,1593
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/30/2013,1.0609535305
+HistoryPitSummary,Unsheltered People in Households...,All Unsheltered People,01/30/2013,1895
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/30/2013,1.1094847775
+HistoryPitSummary,Sheltered People in Households...,With at Least One Adult and One Child,01/29/2014,689
+HistoryPitSummary,Sheltered People in Households...,Under Age 18,01/29/2014,403
+HistoryPitSummary,Sheltered People in Households...,Age 18 - 24,01/29/2014,55
+HistoryPitSummary,Sheltered People in Households...,Over Age 24,01/29/2014,231
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/29/2014,3.0087336245
+HistoryPitSummary,Sheltered People in Households...,With Only Children,01/29/2014,67
+HistoryPitSummary,Sheltered People in Households...,In one-child Households,01/29/2014,56
+HistoryPitSummary,Sheltered People in Households...,In multi-child households ,01/29/2014,11
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/29/2014,1.1166666667
+HistoryPitSummary,Sheltered People in Households...,Without Children,01/29/2014,1276
+HistoryPitSummary,Sheltered People in Households...,Age 18 - 24,01/29/2014,93
+HistoryPitSummary,Sheltered People in Households...,Over Age 24,01/29/2014,1183
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/29/2014,1.0143084261
+HistoryPitSummary,Sheltered People in Households...,All Sheltered People,01/29/2014,2032
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/29/2014,1.3135100194
+HistoryPitSummary,Unsheltered People in Households...,With at Least One Adult and One Child,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Under Age 18,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Age 18 - 24,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Over Age 24,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,With Only Children,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,In one-child Households,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,In multi-child households ,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Without Children,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Age 18 - 24,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Over Age 24,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,All Unsheltered People,01/29/2014,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/29/2014,
+HistoryPitSummary,Sheltered People in Households...,With at Least One Adult and One Child,01/28/2015,511
+HistoryPitSummary,Sheltered People in Households...,Under Age 18,01/28/2015,296
+HistoryPitSummary,Sheltered People in Households...,Age 18 - 24,01/28/2015,43
+HistoryPitSummary,Sheltered People in Households...,Over Age 24,01/28/2015,172
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/28/2015,2.9883040936
+HistoryPitSummary,Sheltered People in Households...,With Only Children,01/28/2015,3
+HistoryPitSummary,Sheltered People in Households...,In one-child Households,01/28/2015,
+HistoryPitSummary,Sheltered People in Households...,In multi-child households ,01/28/2015,
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/28/2015,1
+HistoryPitSummary,Sheltered People in Households...,Without Children,01/28/2015,1400
+HistoryPitSummary,Sheltered People in Households...,Age 18 - 24,01/28/2015,126
+HistoryPitSummary,Sheltered People in Households...,Over Age 24,01/28/2015,1274
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/28/2015,1.0014306152
+HistoryPitSummary,Sheltered People in Households...,All Sheltered People,01/28/2015,1914
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/28/2015,1.2175572519
+HistoryPitSummary,Unsheltered People in Households...,With at Least One Adult and One Child,01/28/2015,158
+HistoryPitSummary,Unsheltered People in Households...,Under Age 18,01/28/2015,77
+HistoryPitSummary,Unsheltered People in Households...,Age 18 - 24,01/28/2015,12
+HistoryPitSummary,Unsheltered People in Households...,Over Age 24,01/28/2015,69
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/28/2015,3.3617021277
+HistoryPitSummary,Unsheltered People in Households...,With Only Children,01/28/2015,2
+HistoryPitSummary,Unsheltered People in Households...,In one-child Households,01/28/2015,
+HistoryPitSummary,Unsheltered People in Households...,In multi-child households ,01/28/2015,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/28/2015,1
+HistoryPitSummary,Unsheltered People in Households...,Without Children,01/28/2015,1727
+HistoryPitSummary,Unsheltered People in Households...,Age 18 - 24,01/28/2015,134
+HistoryPitSummary,Unsheltered People in Households...,Over Age 24,01/28/2015,1593
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/28/2015,1.0753424658
+HistoryPitSummary,Unsheltered People in Households...,All Unsheltered People,01/28/2015,1887
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/28/2015,1.1401812689
+HistoryPitSummary,Sheltered People in Households...,With at Least One Adult and One Child,01/27/2016,547
+HistoryPitSummary,Sheltered People in Households...,Under Age 18,01/27/2016,318
+HistoryPitSummary,Sheltered People in Households...,Age 18 - 24,01/27/2016,42
+HistoryPitSummary,Sheltered People in Households...,Over Age 24,01/27/2016,187
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/27/2016,3.0558659218
+HistoryPitSummary,Sheltered People in Households...,With Only Children,01/27/2016,2
+HistoryPitSummary,Sheltered People in Households...,In one-child Households,01/27/2016,
+HistoryPitSummary,Sheltered People in Households...,In multi-child households ,01/27/2016,
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/27/2016,1
+HistoryPitSummary,Sheltered People in Households...,Without Children,01/27/2016,1478
+HistoryPitSummary,Sheltered People in Households...,Age 18 - 24,01/27/2016,146
+HistoryPitSummary,Sheltered People in Households...,Over Age 24,01/27/2016,1332
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/27/2016,1.0047586676
+HistoryPitSummary,Sheltered People in Households...,All Sheltered People,01/27/2016,2027
+HistoryPitSummary,Sheltered People in Households...,Average household size,01/27/2016,1.2269975787
+HistoryPitSummary,Unsheltered People in Households...,With at Least One Adult and One Child,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Under Age 18,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Age 18 - 24,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Over Age 24,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,With Only Children,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,In one-child Households,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,In multi-child households ,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Without Children,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Age 18 - 24,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Over Age 24,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,All Unsheltered People,01/27/2016,
+HistoryPitSummary,Unsheltered People in Households...,Average household size,01/27/2016,

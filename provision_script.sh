@@ -48,7 +48,7 @@ pip install csvkit >> $LOGFILE         # for commands 'csvsql' and 'csvstat'
 # configure PostgreSQL
 
 echo 'Creating dbuser user in PostgreSQL...'
-su postgres -c 'psql -c "DROP USER IF EXISTS dbuser;"' >> $LOGFILE
+# su postgres -c 'psql -c "DROP USER IF EXISTS dbuser;"' >> $LOGFILE
 su postgres -c 'psql -c "CREATE USER dbuser WITH CREATEUSER;"' >> $LOGFILE
 su postgres -c 'psql -c "ALTER USER dbuser PASSWORD '\''password123'\'';"' >> $LOGFILE
 su postgres -c 'psql -c "ALTER ROLE dbuser SET client_encoding TO '\''utf8'\'';"' >> $LOGFILE
