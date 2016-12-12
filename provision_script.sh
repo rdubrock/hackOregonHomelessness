@@ -8,15 +8,16 @@ echo > $LOGFILE
 
 
 # Add postgis to list of trusted repositories
-echo 'Adding postgis to list of trusted repositories...'
-sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt trusty-pgdg main" >> /etc/apt/sources.list'
+#echo 'Adding postgis to list of trusted repositories...'
+#sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt trusty-pgdg main" >> /etc/apt/sources.list'
 wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
 apt-get update -y
 apt-get upgrade -y
 
 
 # install apt packages
-
+echo 'Installing tree'
+apt-get install -y tree >> $LOGFILE
 echo 'Installing Firefox...'
 apt-get install -y firefox >> $LOGFILE
 echo 'Installing PostgreSQL 9.5...'
@@ -46,18 +47,25 @@ pip install csvkit >> $LOGFILE         # for commands 'csvsql' and 'csvstat'
 
 # configure PostgreSQL
 
-echo 'Creating vagrant user in PostgreSQL...'
-su postgres -c 'psql -c "CREATE USER vagrant WITH CREATEUSER;"' >> $LOGFILE
+echo 'Creating dbuser user in PostgreSQL...'
+su postgres -c 'psql -c "DROP USER IF EXISTS dbuser;"' >> $LOGFILE
+su postgres -c 'psql -c "CREATE USER dbuser WITH CREATEUSER;"' >> $LOGFILE
+su postgres -c 'psql -c "ALTER USER dbuser PASSWORD '\''password123'\'';"' >> $LOGFILE
+su postgres -c 'psql -c "ALTER ROLE dbuser SET client_encoding TO '\''utf8'\'';"' >> $LOGFILE
+su postgres -c 'psql -c "ALTER ROLE dbuser SET default_transaction_isolation TO '\''read committed'\'';"' >> $LOGFILE
+su postgres -c 'psql -c "ALTER ROLE dbuser SET timezone TO '\''UTC'\'';"' >> $LOGFILE
 
-echo 'Creating vagrant database in PostgreSQL...'
-su postgres -c 'psql -c "CREATE DATABASE vagrant;"' >> $LOGFILE
+echo 'Creating portlandhomelesstally database in PostgreSQL...'
+su postgres -c 'psql -c "DROP DATABASE IF EXISTS portlandhomelesstally;"' >> $LOGFILE
+su postgres -c 'psql -c "CREATE DATABASE portlandhomelesstally;"' >> $LOGFILE
+su postgres -c 'psql -c "GRANT ALL PRIVILEGES ON DATABASE portlandhomelesstally TO dbuser;"' >> $LOGFILE
 
-echo 'Running scripts as user vagrant...'
+echo 'Running scripts as user vm vagrant...'
 su vagrant -c 'bash ~vagrant/proj/provision_script_vagrant.sh' >> $LOGFILE
 
 # Set up Schema
-su vagrant -c 'psql < proj/build-tables.sql'
-	
+su postgres -c 'psql < proj/build-tables.sql'
+
 
 
 # change log file owner to vagrant
