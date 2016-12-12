@@ -42,6 +42,33 @@ def pit_list(request, format=None):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET', 'PUT', 'DELETE'])
+def pit_detail(request, pk, format=None):
+    """
+    Retrieve, update or delete a PIT tally instance.
+    """
+    try:
+        tally = HistoryPitSummaryAPI.objects.get(pk=pk)
+    except HistoryPitSummaryAPI.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializedPit = PitSerializer(instance=tally)
+        print('INFO: GET PIT pit_list')
+        print(serializedPit)
+        return Response(serializedPit.data)
+
+    elif request.method == 'PUT':
+        serializedPit = PitSerializer(tally, data=request.data) # takes data in and serializes to python
+        if serializedPit.is_valid():
+            serializedPit.save() # save the updated pit tally
+            return Response(serializedPit.data)
+        return Response(serializedPit.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        tally.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
 @api_view(['GET', 'POST'])
 def pitsub_list(request, format=None):
     """
