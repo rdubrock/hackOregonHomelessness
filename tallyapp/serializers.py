@@ -8,19 +8,19 @@ class HicSerializer(serializers.ModelSerializer):
     """
 
     class Meta:
-        model = HistoryHic
-        fields = ('Shelter', 'BedType', 'Date')
+        model = HistoryHicAPI
+        fields = ('id', 'Shelter', 'BedType', 'Date')
 
 class HicWriteSerializer(serializers.ModelSerializer):
     """
     Serializer for PUT/DELETE operations on shelters.
     """
 
-    shelters = serializers.PrimaryKeyRelatedField(queryset=HistoryHic.objects.all(), allow_null=True)
+    shelters = serializers.PrimaryKeyRelatedField(queryset=HistoryHicAPI.objects.all(), allow_null=True)
 
     class Meta:
-        model = HistoryHic
-        fields = ('Shelter', 'BedType', 'Date')
+        model = HistoryHicAPI
+        fields = ('id', 'Shelter', 'BedType', 'Date')
 
 class PitSerializer(serializers.ModelSerializer):
     """
@@ -28,16 +28,16 @@ class PitSerializer(serializers.ModelSerializer):
     """
 
     class Meta:
-        model = HistoryPitSummary
-        fields = ('Table', 'Population', 'SubPopulation', 'Date', 'Value')
+        model = HistoryPitSummaryAPI
+        fields = ('id', 'Table', 'Population', 'SubPopulation', 'Date', 'Value')
 
 class PitWriteSerializer(serializers.ModelSerializer):
     """
     Serializer for PUT/DELETE operations on populations.
     """
 
-    populations = serializers.PrimaryKeyRelatedField(queryset=HistoryPitSummary.objects.all(), allow_null=True)
+    populations = serializers.PrimaryKeyRelatedField(queryset=HistoryPitSummaryAPI.objects.all(), allow_null=True)
 
     class Meta:
-        model = HistoryPitSummary
-        fields = ('Table', 'Population', 'SubPopulation', 'Date', 'Value')
+        model = HistoryPitSummaryAPI
+        fields = ('id', 'Table', 'Population', 'SubPopulation', 'Date', 'Value')

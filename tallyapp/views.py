@@ -27,7 +27,7 @@ def hic_list(request, format=None):
     """
 
     if request.method == 'GET':
-        shelters = HistoryHic.objects.all()
+        shelters = HistoryHicAPI.objects.all()
         print('INFO: shelter_list')
         serializer = HicSerializer(shelters, many=True)
         print(serializer)
@@ -48,7 +48,7 @@ def pit_list(request, format=None):
     """
 
     if request.method == 'GET':
-        populations = HistoryPitSummary.objects.all()
+        populations = HistoryPitSummaryAPI.objects.all()
         print('INFO: population_list')
         serializer = PitSerializer(populations, many=True)
         print(serializer)

@@ -83,13 +83,13 @@ WSGI_APPLICATION = 'homelessness.wsgi.application'
 #    }
 #}
 
-# troys 10DEC added postgresql config
+# troys 11DEC postgresql config for database 'vagrant' and user 'vagrant'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'portlandhomelesstally',
-        'USER': 'troys',
-        'PASSWORD': 'troys',
+        'USER': 'dbuser',
+        'PASSWORD': 'password123',
         'HOST': 'localhost',
         'PORT': '',
     }

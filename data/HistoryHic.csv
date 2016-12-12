@@ -1,3 +1,5 @@
+table,unitbedtype,sheltertype,date,value
+
 UnitBedType,"Units, Households with Children","Beds, Households with Children","Beds, Households without Children","Units, Households with Children","Beds, Households with Children","Beds, Households without Children","Beds, Households without Children","Units, Households with Children","Beds, Households with Children","Beds, Households without Children","Units, Households with Children","Beds, Households with Children","Beds, Households without Children","Units, Households with Children","Beds, Households with Children","Beds, Households without Children"
 ShelterType,Emergency Shelter,Emergency Shelter,Emergency Shelter,Transitional Housing,Transitional Housing,Transitional Housing,Safe Haven,Permanent Supportive Housing,Permanent Supportive Housing,Permanent Supportive Housing,HPRP,HPRP,HPRP,RRH,RRH,RRH
 01/30/2013 (2013),113,340,437,347,"1,011",861,,331,989,"2,537",,,,85,205,96

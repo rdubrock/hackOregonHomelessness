@@ -2,7 +2,7 @@
 from django.db import models
 
 
-class HistoryHic(models.Model):
+class HistoryHicAPI(models.Model):
     """
     Database schema for HistoryHic - City of Portland homeless shelter tally
     """
@@ -17,7 +17,7 @@ class HistoryHic(models.Model):
     def __str__(self):
         return '%s %s %s' % (self.Shelter, self.BedType, self.Date)
 
-class HistoryPitSummary(models.Model):
+class HistoryPitSummaryAPI(models.Model):
     """
     Database schema for HistoryPitSummary - City of Portland homeless population tally
     """
@@ -32,4 +32,4 @@ class HistoryPitSummary(models.Model):
          ordering = ('Table',)
 
     def __str__(self):
-        return '%s %s %s %s %s' % (self.Table, self.Population, self.Sub-Population, self.Date, self.Value)
+        return '%s %s %s %s %s' % (self.Table, self.Population, self.SubPopulation, self.Date, self.Value)

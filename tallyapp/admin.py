@@ -2,8 +2,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import HistoryHic
-from .models import HistoryPitSummary
+from .models import HistoryHicAPI
+from .models import HistoryPitSummaryAPI
 
-admin.site.register(HistoryHic)
-admin.site.register(HistoryPitSummary)
+admin.site.register(HistoryHicAPI)
+admin.site.register(HistoryPitSummaryAPI)
